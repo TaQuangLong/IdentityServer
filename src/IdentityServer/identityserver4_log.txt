@@ -1,0 +1,703 @@
+2019-08-07 14:31:41.332 +07:00 [INF] Starting IdentityServer4 version 2.5.0.0
+2019-08-07 14:31:41.510 +07:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-08-07 14:31:41.523 +07:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2019-08-07 14:31:41.523 +07:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2019-08-07 14:31:41.524 +07:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2019-08-07 14:31:41.524 +07:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2019-08-07 14:31:41.524 +07:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2019-08-07 14:31:41.524 +07:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2019-08-07 14:31:41.896 +07:00 [DBG] Login Url: /Account/Login
+2019-08-07 14:31:41.898 +07:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-08-07 14:31:41.898 +07:00 [DBG] Logout Url: /Account/Logout
+2019-08-07 14:31:41.898 +07:00 [DBG] ConsentUrl Url: /consent
+2019-08-07 14:31:41.898 +07:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-08-07 14:31:41.898 +07:00 [DBG] Error Url: /home/error
+2019-08-07 14:31:41.898 +07:00 [DBG] Error Id Parameter: errorId
+2019-08-07 14:33:36.676 +07:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-08-07 14:33:36.682 +07:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-08-07 14:33:36.682 +07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-08-07 14:33:36.689 +07:00 [DBG] Start discovery request
+2019-08-07 15:17:55.012 +07:00 [INF] Starting IdentityServer4 version 2.5.0.0
+2019-08-07 15:17:55.069 +07:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-08-07 15:17:55.082 +07:00 [WRN] No authentication scheme has been set. Setting either a default authentication scheme or a CookieAuthenticationScheme on IdentityServerOptions is required.
+2019-08-07 15:17:55.606 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:17:55.606 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:17:56.061 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:17:56.086 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:17:58.815 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:17:58.875 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:18:02.890 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:18:02.928 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:18:04.306 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:18:04.371 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:18:04.917 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:18:04.965 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:18:44.770 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:18:44.817 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:19:01.816 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:19:01.860 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:19:56.950 +07:00 [INF] Starting IdentityServer4 version 2.5.0.0
+2019-08-07 15:19:56.990 +07:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-08-07 15:19:56.998 +07:00 [WRN] No authentication scheme has been set. Setting either a default authentication scheme or a CookieAuthenticationScheme on IdentityServerOptions is required.
+2019-08-07 15:19:57.300 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:19:57.358 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:20:06.508 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:20:06.570 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:20:08.195 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:20:08.241 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:20:10.396 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:20:10.451 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:23:25.086 +07:00 [INF] Starting IdentityServer4 version 2.5.0.0
+2019-08-07 15:23:25.143 +07:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-08-07 15:23:25.152 +07:00 [WRN] No authentication scheme has been set. Setting either a default authentication scheme or a CookieAuthenticationScheme on IdentityServerOptions is required.
+2019-08-07 15:23:25.473 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:23:25.581 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:23:39.829 +07:00 [INF] Starting IdentityServer4 version 2.5.0.0
+2019-08-07 15:23:39.883 +07:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-08-07 15:23:39.895 +07:00 [WRN] No authentication scheme has been set. Setting either a default authentication scheme or a CookieAuthenticationScheme on IdentityServerOptions is required.
+2019-08-07 15:23:40.374 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:23:40.661 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:23:43.233 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:23:43.288 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:23:46.427 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:23:46.476 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:23:47.723 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:23:47.768 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:24:01.737 +07:00 [INF] Starting IdentityServer4 version 2.5.0.0
+2019-08-07 15:24:01.783 +07:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-08-07 15:24:01.794 +07:00 [WRN] No authentication scheme has been set. Setting either a default authentication scheme or a CookieAuthenticationScheme on IdentityServerOptions is required.
+2019-08-07 15:24:02.257 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:24:11.247 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:24:11.312 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:24:32.657 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:24:32.725 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:24:34.695 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:24:34.766 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:24:34.876 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:24:34.922 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:24:35.061 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:24:35.123 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:24:35.243 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:24:35.289 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:24:35.447 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:24:35.507 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:24:35.633 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:24:35.700 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:30:34.778 +07:00 [INF] Starting IdentityServer4 version 2.5.0.0
+2019-08-07 15:30:34.823 +07:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-08-07 15:30:34.830 +07:00 [WRN] No authentication scheme has been set. Setting either a default authentication scheme or a CookieAuthenticationScheme on IdentityServerOptions is required.
+2019-08-07 15:30:35.313 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:30:35.626 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No DefaultAuthenticateScheme found.
+   at IdentityServer4.Services.DefaultUserSession.GetCookieSchemeAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 114
+   at IdentityServer4.Services.DefaultUserSession.AuthenticateAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 140
+   at IdentityServer4.Services.DefaultUserSession.GetSessionIdAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 206
+   at IdentityServer4.Services.DefaultUserSession.EnsureSessionIdCookieAsync() in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Services\Default\DefaultUserSession.cs:line 220
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 45
+   at IdentityServer4.Hosting.MutualTlsTokenEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\MtlsTokenEndpointMiddleware.cs:line 60
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-07 15:52:50.053 +07:00 [INF] Starting IdentityServer4 version 2.5.0.0
+2019-08-07 15:52:50.104 +07:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-08-07 15:52:50.114 +07:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2019-08-07 15:52:50.114 +07:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2019-08-07 15:52:50.114 +07:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2019-08-07 15:52:50.114 +07:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2019-08-07 15:52:50.114 +07:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2019-08-07 15:52:50.114 +07:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2019-08-07 15:52:50.551 +07:00 [DBG] Login Url: /Account/Login
+2019-08-07 15:52:50.554 +07:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-08-07 15:52:50.554 +07:00 [DBG] Logout Url: /Account/Logout
+2019-08-07 15:52:50.554 +07:00 [DBG] ConsentUrl Url: /consent
+2019-08-07 15:52:50.554 +07:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-08-07 15:52:50.554 +07:00 [DBG] Error Url: /home/error
+2019-08-07 15:52:50.554 +07:00 [DBG] Error Id Parameter: errorId
+2019-08-07 15:53:51.496 +07:00 [INF] Starting IdentityServer4 version 2.5.0.0
+2019-08-07 15:53:51.539 +07:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-08-07 15:53:51.548 +07:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2019-08-07 15:53:51.548 +07:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2019-08-07 15:53:51.548 +07:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2019-08-07 15:53:51.548 +07:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2019-08-07 15:53:51.549 +07:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2019-08-07 15:53:51.549 +07:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2019-08-07 15:53:51.996 +07:00 [DBG] Login Url: /Account/Login
+2019-08-07 15:53:51.998 +07:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-08-07 15:53:51.998 +07:00 [DBG] Logout Url: /Account/Logout
+2019-08-07 15:53:51.998 +07:00 [DBG] ConsentUrl Url: /consent
+2019-08-07 15:53:51.998 +07:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-08-07 15:53:51.998 +07:00 [DBG] Error Url: /home/error
+2019-08-07 15:53:51.998 +07:00 [DBG] Error Id Parameter: errorId
